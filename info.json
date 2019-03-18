@@ -1,0 +1,11 @@
+{
+  "name": "Moar-Radar",
+  "version": "0.2.0",
+  "factorio_version": "0.17",
+  "title": "Moar-Radar",
+  "author": "V453000",
+  "contact": "",
+  "homepage": "",
+  "description": "Bigger Radar ranges.",
+  "dependencies": ["base"]
+}

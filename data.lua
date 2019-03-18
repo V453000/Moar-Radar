@@ -1,0 +1,2 @@
+data.raw["radar"]["radar"].max_distance_of_sector_revealed = settings.startup["moar-radar-reveal-area"].value
+data.raw["radar"]["radar"].max_distance_of_nearby_sector_revealed = settings.startup["moar-radar-nearby-reveal-area"].value
