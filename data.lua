@@ -1,2 +1,9 @@
 data.raw["radar"]["radar"].max_distance_of_sector_revealed = settings.startup["moar-radar-reveal-area"].value
 data.raw["radar"]["radar"].max_distance_of_nearby_sector_revealed = settings.startup["moar-radar-nearby-reveal-area"].value
+local original_radar_energy_usage_string        = data.raw["radar"]["radar"].energy_usage
+local original_radar_energy_usage_string_numberA = string.gsub(original_radar_energy_usage_string, "KW", "")
+local original_radar_energy_usage_string_number = string.gsub(original_radar_energy_usage_string_numberA, "kW", "")
+local original_radar_energy_usage_int           = tonumber(original_radar_energy_usage_string_number, 10)
+local result_radar_energy_usage_int = original_radar_energy_usage_int * settings.startup["moar-radar-power-consumption"].value
+local result_radar_energy_usage_string = tostring(result_radar_energy_usage_int) .. "kW"
+data.raw["radar"]["radar"].energy_usage = result_radar_energy_usage_string
